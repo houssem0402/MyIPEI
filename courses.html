@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyIPEI | Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <a href="index.html" class="logo-container">
+                <i class='bx bxs-graduation logo-icon'></i>
+                <h1 class="logo-text">MyIPEI</h1>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span class="link_name" data-i18n="dashboard">Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="courses.html">
+                        <i class='bx bxs-book-content'></i>
+                        <span class="link_name" data-i18n="courses">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule.html">
+                        <i class='bx bxs-calendar'></i>
+                        <span class="link_name" data-i18n="schedule">Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class='bx bxs-message-square-dots'></i>
+                        <span class="link_name" data-i18n="messages">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <span class="link_name" data-i18n="analytics">Analytics</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="bottom-menu">
+                <ul>
+                    <li>
+                        <a href="settings.html">
+                            <i class='bx bxs-cog'></i>
+                            <span class="link_name" data-i18n="settings">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout-link">
+                            <i class='bx bxs-log-out'></i>
+                            <span class="link_name" data-i18n="logout">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="toggle-sidebar" id="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="search-bar">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search for courses, materials..." data-i18n="search_placeholder">
+                </div>
+
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class='bx bxs-bell'></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Houssem&background=4F46E5&color=fff" alt="Profile"
+                            class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Houssem</span>
+                            <span class="user-role" data-i18n="role_student">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Courses Content -->
+            <div id="courses-view" class="view-section active" style="display: block;">
+                <div class="section-header">
+                    <h2 data-i18n="all_courses">All Courses</h2>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-i18n="all_courses">All</button>
+                        <button class="filter-btn" data-i18n="in_progress">In Progress</button>
+                        <button class="filter-btn" data-i18n="completed">Completed</button>
+                    </div>
+                </div>
+                <div class="courses-grid-view">
+                    <!-- New Math 2 Course -->
+                    <div class="course-card-large">
+                        <div class="card-image" style="background: #8B5CF6;"></div>
+                        <div class="card-content">
+                            <span class="category">Mathematics</span>
+                            <h3>Math 2: Analyse</h3>
+                            <p>Comprehensive analysis course including Séries numériques, Intégrales, and more.</p>
+                            <div class="card-meta">
+                                <span><i class='bx bx-time'></i> 18h 00m</span>
+                                <span><i class='bx bx-video'></i> 5 Chapters</span>
+                            </div>
+                            <!-- Link to the Math 2 Detail Page -->
+                            <a href="math2.html" class="start-btn"
+                                style="display: block; text-align: center; text-decoration: none;"
+                                data-i18n="start">Start</a>
+                        </div>
+                    </div>
+                    <div class="course-card-large">
+                        <div class="card-image" style="background: #FDE047;"></div>
+                        <div class="card-content">
+                            <span class="category">Mathematics</span>
+                            <h3>Advanced Calculus</h3>
+                            <p>Master limits, derivatives, and integrals.</p>
+                            <div class="card-meta">
+                                <span><i class='bx bx-time'></i> 12h 30m</span>
+                                <span><i class='bx bx-video'></i> 24 Lessons</span>
+                            </div>
+                            <a href="biology.html" class="start-btn"
+                                style="display: block; text-align: center; text-decoration: none;"
+                                data-i18n="start">Start</a>
+                        </div>
+                    </div>
+                    <div class="course-card-large">
+                        <div class="card-image" style="background: #60A5FA;"></div>
+                        <div class="card-content">
+                            <span class="category">Physics</span>
+                            <h3>Quantum Mechanics</h3>
+                            <p>Introduction to quantum fields and states.</p>
+                            <div class="card-meta">
+                                <span><i class='bx bx-time'></i> 8h 15m</span>
+                                <span><i class='bx bx-video'></i> 16 Lessons</span>
+                            </div>
+                            <a href="physics.html" class="start-btn"
+                                style="display: block; text-align: center; text-decoration: none;"
+                                data-i18n="start">Start</a>
+                        </div>
+                    </div>
+                    <div class="course-card-large">
+                        <div class="card-image" style="background: #F472B6;"></div>
+                        <div class="card-content">
+                            <span class="category">Biology</span>
+                            <h3>Molecular Biology</h3>
+                            <p>Understanding cell structure and function.</p>
+                            <div class="card-meta">
+                                <span><i class='bx bx-time'></i> 15h 45m</span>
+                                <span><i class='bx bx-video'></i> 32 Lessons</span>
+                            </div>
+                            <a href="physics.html" class="start-btn"
+                                style="display: block; text-align: center; text-decoration: none;"
+                                data-i18n="start">Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyIPEI | Math 2: Analyse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .course-detail-header {
+            background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            color: white;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .course-detail-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            font-weight: 500;
+        }
+
+        .chapter-list {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .chapter-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #F3F4F6;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-item:hover {
+            background-color: #F9FAFB;
+        }
+
+        .chapter-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #8B5CF6;
+            margin-right: 1.5rem;
+            width: 30px;
+        }
+
+        .chapter-info {
+            flex: 1;
+        }
+
+        .chapter-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+
+        .chapter-status {
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        /* RTL Specifics */
+        [dir="rtl"] .chapter-number {
+            margin-right: 0;
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <a href="index.html" class="logo-container">
+                <i class='bx bxs-graduation logo-icon'></i>
+                <h1 class="logo-text">MyIPEI</h1>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span class="link_name" data-i18n="dashboard">Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="courses.html">
+                        <i class='bx bxs-book-content'></i>
+                        <span class="link_name" data-i18n="courses">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule.html">
+                        <i class='bx bxs-calendar'></i>
+                        <span class="link_name" data-i18n="schedule">Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class='bx bxs-message-square-dots'></i>
+                        <span class="link_name" data-i18n="messages">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <span class="link_name" data-i18n="analytics">Analytics</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="bottom-menu">
+                <ul>
+                    <li>
+                        <a href="settings.html">
+                            <i class='bx bxs-cog'></i>
+                            <span class="link_name" data-i18n="settings">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout-link">
+                            <i class='bx bxs-log-out'></i>
+                            <span class="link_name" data-i18n="logout">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="toggle-sidebar" id="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="search-bar">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search for courses, materials..." data-i18n="search_placeholder">
+                </div>
+
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class='bx bxs-bell'></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Houssem&background=4F46E5&color=fff" alt="Profile"
+                            class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Houssem</span>
+                            <span class="user-role" data-i18n="role_student">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Course Detail Content -->
+            <div id="course-detail-view" class="view-section active" style="display: block;">
+
+                <div class="course-detail-header">
+                    <div class="breadcrumb">
+                        <a href="courses.html"><i class='bx bx-arrow-back'></i> Back to Courses</a>
+                    </div>
+                    <h2>Math 2: Analyse</h2>
+                    <p>Comprehensive analysis course for engineering students.</p>
+                </div>
+
+                <div class="chapter-list">
+                    <h3 style="margin-bottom: 1.5rem;">Course Content</h3>
+
+                    <a href="math2_chapter1.html" style="text-decoration: none; display: block; color: inherit;">
+                        <div class="chapter-item" id="item-math2-ch1">
+                            <span class="chapter-number">01</span>
+                            <div class="chapter-info">
+                                <span class="chapter-title">Séries numériques</span>
+                            </div>
+                            <i class='bx bx-play-circle chapter-status' id="icon-math2-ch1"></i>
+                        </div>
+                    </a>
+
+                    <div class="chapter-item">
+                        <span class="chapter-number">02</span>
+                        <div class="chapter-info">
+                            <span class="chapter-title">Intégrales</span>
+                        </div>
+                        <i class='bx bx-lock-alt chapter-status'></i>
+                    </div>
+
+                    <div class="chapter-item">
+                        <span class="chapter-number">03</span>
+                        <div class="chapter-info">
+                            <span class="chapter-title">Suites et séries numériques</span>
+                        </div>
+                        <i class='bx bx-lock-alt chapter-status'></i>
+                    </div>
+
+                    <div class="chapter-item">
+                        <span class="chapter-number">04</span>
+                        <div class="chapter-info">
+                            <span class="chapter-title">Intégrales à paramètres</span>
+                        </div>
+                        <i class='bx bx-lock-alt chapter-status'></i>
+                    </div>
+
+                    <div class="chapter-item">
+                        <span class="chapter-number">05</span>
+                        <div class="chapter-info">
+                            <span class="chapter-title">Séries entières</span>
+                        </div>
+                        <i class='bx bx-lock-alt chapter-status'></i>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

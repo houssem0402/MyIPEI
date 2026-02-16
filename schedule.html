@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyIPEI | Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <i class='bx bxs-graduation logo-icon'></i>
+                <h1 class="logo-text">MyIPEI</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span class="link_name" data-i18n="dashboard">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class='bx bxs-book-content'></i>
+                        <span class="link_name" data-i18n="courses">Courses</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="schedule.html">
+                        <i class='bx bxs-calendar'></i>
+                        <span class="link_name" data-i18n="schedule">Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class='bx bxs-message-square-dots'></i>
+                        <span class="link_name" data-i18n="messages">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <span class="link_name" data-i18n="analytics">Analytics</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="bottom-menu">
+                <ul>
+                    <li>
+                        <a href="settings.html">
+                            <i class='bx bxs-cog'></i>
+                            <span class="link_name" data-i18n="settings">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout-link">
+                            <i class='bx bxs-log-out'></i>
+                            <span class="link_name" data-i18n="logout">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="toggle-sidebar" id="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="search-bar">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search for courses, materials..." data-i18n="search_placeholder">
+                </div>
+
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class='bx bxs-bell'></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Houssem&background=4F46E5&color=fff" alt="Profile"
+                            class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Houssem</span>
+                            <span class="user-role" data-i18n="role_student">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Schedule Content -->
+            <div id="schedule-view" class="view-section active" style="display: block;">
+                <h2 data-i18n="my_schedule">My Schedule</h2>
+                <div class="calendar-container">
+                    <!-- Simple Calendar Header -->
+                    <div class="calendar-header">
+                        <button>&lt;</button>
+                        <h3>February 2026</h3>
+                        <button>&gt;</button>
+                    </div>
+                    <!-- Calendar Grid -->
+                    <div class="calendar-grid">
+                        <div class="day-name">Sun</div>
+                        <div class="day-name">Mon</div>
+                        <div class="day-name">Tue</div>
+                        <div class="day-name">Wed</div>
+                        <div class="day-name">Thu</div>
+                        <div class="day-name">Fri</div>
+                        <div class="day-name">Sat</div>
+
+                        <!-- Empty days -->
+                        <div class="day empty"></div>
+                        <div class="day empty"></div>
+
+                        <!-- Days -->
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day active-day">18<span class="dot urgent"></span></div>
+                        <div class="day">19<span class="dot"></span></div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

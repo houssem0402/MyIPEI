@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyIPEI | Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <a href="index.html" class="logo-container">
+                <i class='bx bxs-graduation logo-icon'></i>
+                <h1 class="logo-text">MyIPEI</h1>
+            </a>
+
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="index.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span class="link_name" data-i18n="dashboard">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class='bx bxs-book-content'></i>
+                        <span class="link_name" data-i18n="courses">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule.html">
+                        <i class='bx bxs-calendar'></i>
+                        <span class="link_name" data-i18n="schedule">Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class='bx bxs-message-square-dots'></i>
+                        <span class="link_name" data-i18n="messages">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <span class="link_name" data-i18n="analytics">Analytics</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="bottom-menu">
+                <ul>
+                    <li>
+                        <a href="settings.html">
+                            <i class='bx bxs-cog'></i>
+                            <span class="link_name" data-i18n="settings">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout-link">
+                            <i class='bx bxs-log-out'></i>
+                            <span class="link_name" data-i18n="logout">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="toggle-sidebar" id="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="search-bar">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search for courses, materials..." data-i18n="search_placeholder">
+                </div>
+
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class='bx bxs-bell'></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Houssem&background=4F46E5&color=fff" alt="Profile"
+                            class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Houssem</span>
+                            <span class="user-role" data-i18n="role_student">Student</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-grid">
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <div class="welcome-text">
+                        <h2 data-i18n="hello_user">Hello, Houssem! 👋</h2>
+                        <p data-i18n="welcome_msg">Keep up the good work. You've completed 70% of your weekly goals.</p>
+                    </div>
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/studying-girl-illustration-download-in-svg-png-gif-file-formats--online-education-study-learning-student-pack-school-illustrations-4548464.png"
+                        alt="Study Illustration" class="welcome-img">
+                </section>
+
+                <!-- Stats Cards -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon p-blue">
+                            <i class='bx bxs-book-open'></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p data-i18n="courses_progress">Courses in Progress</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon p-green">
+                            <i class='bx bxs-check-circle'></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>05</h3>
+                            <p data-i18n="completed">Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon p-purple">
+                            <i class='bx bxs-time-five'></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>42h</h3>
+                            <p data-i18n="hours_spent">Hours Spent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Learning -->
+                <section class="continue-learning">
+                    <div class="section-header">
+                        <h3 data-i18n="continue_learning">Continue Learning</h3>
+                        <a href="courses.html" class="view-all" data-i18n="view_all">View All</a>
+                    </div>
+                    <div class="course-cards">
+                        <!-- Card 1 -->
+                        <div class="course-card">
+                            <div class="course-icon orange">
+                                <i class='bx bxs-calculator'></i>
+                            </div>
+                            <div class="course-details">
+                                <h4>Advanced Mathematics II</h4>
+                                <span class="subtitle">Chapter 4: Calculus</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75% Complete</span>
+                            </div>
+                            <button class="resume-btn"><i class='bx bx-play'></i></button>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="course-card">
+                            <div class="course-icon blue">
+                                <i class='bx bxs-flask'></i>
+                            </div>
+                            <div class="course-details">
+                                <h4>Physics: Mechanics</h4>
+                                <span class="subtitle">Lab 3: Motion</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <span class="progress-text">45% Complete</span>
+                            </div>
+                            <button class="resume-btn"><i class='bx bx-play'></i></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Schedule -->
+                <section class="schedule-widget">
+                    <div class="section-header">
+                        <h3 data-i18n="upcoming_schedule">Upcoming Schedule</h3>
+                        <a href="schedule.html" class="view-all" data-i18n="see_calendar">See Calendar</a>
+                    </div>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <div class="date-box">
+                                <span class="day">18</span>
+                                <span class="month">Feb</span>
+                            </div>
+                            <div class="schedule-details">
+                                <h4 data-i18n="math_exam">Math Midterm Exam</h4>
+                                <p>10:00 AM - 12:00 PM</p>
+                            </div>
+                            <span class="tag urgent">Exam</span>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="date-box">
+                                <span class="day">19</span>
+                                <span class="month">Feb</span>
+                            </div>
+                            <div class="schedule-details">
+                                <h4 data-i18n="physics_study">Physics Group Study</h4>
+                                <p>02:00 PM - 04:00 PM</p>
+                            </div>
+                            <span class="tag">Study</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
